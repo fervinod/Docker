@@ -5,8 +5,8 @@ import records from "./routes/record.js";
 const PORT = process.env.PORT || 5050;
 const app = express();
 
-const cors = require("cors");
-app.use(cors({ origin: "http://18.234.153.144:5173" }));
+#const cors = require("cors");
+#app.use(cors({ origin: "http://18.234.153.144:5173" }));
 
 app.use(cors());
 app.use(express.json());
