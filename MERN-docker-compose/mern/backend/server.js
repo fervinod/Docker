@@ -5,17 +5,12 @@ import records from "./routes/record.js";
 const PORT = process.env.PORT || 5050;
 const app = express();
 
-// ✅ CORS setup
 app.use(cors({
-  origin: [
-    "http://localhost:3000",             // for local React dev
-    "http://204.236.209.251:3000",       // for remote React dev
-    "https://your-frontend-domain.com"   // for production build (replace with actual)
-  ],
-  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"], // include PATCH + OPTIONS
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
 }));
+
 
 // ✅ Parse incoming JSON
 app.use(express.json());
