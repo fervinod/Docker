@@ -16,8 +16,10 @@ export default function Record() {
       const id = params.id?.toString() || undefined;
       if(!id) return;
       setIsNew(false);
+       // replace with your server's public IP or domain
+      
       const response = await fetch(
-        `http://204.236.209.251:5050/record/${params.id.toString()}`
+        `http://54.196.15.154:5050/record/${params.id.toString()}`
       );
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -51,7 +53,7 @@ export default function Record() {
       let response;
       if (isNew) {
         // if we are adding a new record we will POST to /record.
-        response = await fetch("http://204.236.209.251:5050/record", {
+        response = await fetch("http://54.196.15.154:5050/record", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -60,7 +62,7 @@ export default function Record() {
         });
       } else {
         // if we are updating a record we will PATCH to /record/:id.
-        response = await fetch(`http://204.236.209.251:5050/record/${params.id}`, {
+        response = await fetch(`http://54.196.15.154:5050/record/${params.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
