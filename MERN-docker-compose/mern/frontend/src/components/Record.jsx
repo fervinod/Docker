@@ -15,7 +15,7 @@ export default function Record() {
   const API_BASE_URL =
     window.location.hostname === "localhost"
       ? "http://localhost:5050"
-      : "http://54.196.15.154:5050"; // replace with your actual backend IP/domain
+      : "http://54.157.26.49:5050"; // replace with your actual backend IP/domain
 
   useEffect(() => {
     async function fetchData() {
