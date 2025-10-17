@@ -37,7 +37,7 @@ export default function RecordList() {
   const baseURL =
     window.location.hostname === "localhost"
       ? "http://localhost:5050"
-      : "http://54.196.15.154:5050";
+      : "http://54.157.26.49:5050";
 
   // Fetch all records
   useEffect(() => {
